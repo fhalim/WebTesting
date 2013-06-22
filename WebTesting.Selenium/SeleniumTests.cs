@@ -1,4 +1,4 @@
-﻿namespace WebTesting.Google
+namespace WebTesting.Selenium
 {
     using OpenQA.Selenium;
     using OpenQA.Selenium.Firefox;
@@ -7,7 +7,7 @@
     {
         protected readonly IWebDriver Driver;
 
-        public SeleniumTests()
+        protected SeleniumTests()
         {
             Driver = GetDriver();
         }

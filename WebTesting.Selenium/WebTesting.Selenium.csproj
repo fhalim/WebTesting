@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E382A8AB-DBF7-4828-89B2-5F3D8D32AD8C}</ProjectGuid>
+    <ProjectGuid>{CD34510E-6F38-438D-8E9A-EEAF653132BA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebTesting.Google</RootNamespace>
-    <AssemblyName>WebTesting.Google</AssemblyName>
+    <RootNamespace>WebTesting.Selenium</RootNamespace>
+    <AssemblyName>WebTesting.Selenium</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,22 +32,22 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
     <Reference Include="WebDriver">
       <HintPath>..\lib\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="xunit">
-      <HintPath>..\lib\xunit.dll</HintPath>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\lib\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GoogleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WebTesting.Selenium\WebTesting.Selenium.csproj">
-      <Project>{CD34510E-6F38-438D-8E9A-EEAF653132BA}</Project>
-      <Name>WebTesting.Selenium</Name>
-    </ProjectReference>
+    <Compile Include="SeleniumTests.cs" />
+    <Compile Include="WebDriverExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

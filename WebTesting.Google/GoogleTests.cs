@@ -1,6 +1,7 @@
 ﻿namespace WebTesting.Google
 {
     using OpenQA.Selenium;
+    using Selenium;
     using Xunit;
 
     public class GoogleTests : SeleniumTests
@@ -11,7 +12,13 @@
             GoToGoogleCom();
             EnterMicrosoftAsSearchText();
             Search();
-            var microsoftComLink = Driver.FindElement(By.XPath("//a[@href='http://www.microsoft.com/']"));
+            VerifyLinkToMicrosoft();
+            Driver.TakeScreenshot("microsoft_screenshot.png");
+        }
+
+        private void VerifyLinkToMicrosoft()
+        {
+            var microsoftComLink = Driver.FindLinkByHRef("http://www.microsoft.com/");
             Assert.NotNull(microsoftComLink);
         }
 

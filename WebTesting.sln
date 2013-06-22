@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTesting.Google", "WebTesting.Google\WebTesting.Google.csproj", "{E382A8AB-DBF7-4828-89B2-5F3D8D32AD8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTesting.Selenium", "WebTesting.Selenium\WebTesting.Selenium.csproj", "{CD34510E-6F38-438D-8E9A-EEAF653132BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{E382A8AB-DBF7-4828-89B2-5F3D8D32AD8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E382A8AB-DBF7-4828-89B2-5F3D8D32AD8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E382A8AB-DBF7-4828-89B2-5F3D8D32AD8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD34510E-6F38-438D-8E9A-EEAF653132BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD34510E-6F38-438D-8E9A-EEAF653132BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD34510E-6F38-438D-8E9A-EEAF653132BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD34510E-6F38-438D-8E9A-EEAF653132BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
