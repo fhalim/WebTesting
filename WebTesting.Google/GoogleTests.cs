@@ -13,7 +13,7 @@
             EnterMicrosoftAsSearchText();
             Search();
             VerifyLinkToMicrosoft();
-            Driver.TakeScreenshot("microsoft_screenshot.png");
+            //Driver.TakeScreenshot("microsoft_screenshot.png");
         }
 
         private void VerifyLinkToMicrosoft()

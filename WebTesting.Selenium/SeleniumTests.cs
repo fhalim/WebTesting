@@ -1,5 +1,6 @@
 namespace WebTesting.Selenium
 {
+    using IronPython.Hosting;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Firefox;
 
@@ -9,6 +10,7 @@ namespace WebTesting.Selenium
 
         protected SeleniumTests()
         {
+
             Driver = GetDriver();
         }
 
@@ -19,7 +21,16 @@ namespace WebTesting.Selenium
 
         private static IWebDriver GetDriver()
         {
-            return GetFirefoxDriver();
+            return GetDriverFromScript();
+            //return GetFirefoxDriver();
+        }
+
+        private static IWebDriver GetDriverFromScript()
+        {
+            var pythonEngine = Python.CreateRuntime();
+            pythonEngine.LoadAssembly(typeof(IWebDriver).Assembly);
+            var scope = pythonEngine.ExecuteFile("seleniumconfig.py");
+            return scope.GetVariable<IWebDriver>("webdriver");
         }
 
         private static IWebDriver GetFirefoxDriver()
